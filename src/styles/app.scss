@@ -4,9 +4,14 @@
 
 body {
   background-color: $off-white;
+
+  ::selection {
+    background-color: $text;
+    color: white;
+  }
 }
 
-header {
+.header {
   background-color: $light-gray;
   display: flex;
   justify-content: space-between;
@@ -18,4 +23,8 @@ header {
       margin-right: 1rem;
     }
   }
+}
+
+img {
+  width: 100vw;
 }

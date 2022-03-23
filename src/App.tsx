@@ -1,22 +1,27 @@
-import Nav from './components/Nav';
+import Nav from './components/panels/Nav';
+import Bio from './components/panels/Bio';
+import Skills from './components/panels/Skills';
+import Projects from './components/panels/Projects';
+import Contact from './components/panels/Contact';
+
 import './styles/app.scss';
 
 /**
- * TODO:
+ * TODO
  *
- * bio component
- * skills component
- * projects component
- * contact component
- * footer component
+ * Sendgrid for contact form?
  *
  */
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <div className="app">
+    <>
       <Nav />
-    </div>
+      <Bio />
+      <Skills />
+      <Projects />
+      <Contact />
+    </>
   );
 }
 
