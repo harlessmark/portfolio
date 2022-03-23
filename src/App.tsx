@@ -1,9 +1,21 @@
-import './App.scss';
+import Nav from './components/Nav';
+import './styles/app.scss';
 
-function App() {
+/**
+ * TODO:
+ *
+ * bio component
+ * skills component
+ * projects component
+ * contact component
+ * footer component
+ *
+ */
+
+const App: React.FC = (): JSX.Element => {
   return (
-    <div className="App">
-
+    <div className="app">
+      <Nav />
     </div>
   );
 }

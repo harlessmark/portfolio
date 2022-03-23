@@ -1,3 +1,21 @@
 @import "_reset.scss";
+@import "_typography.scss";
 @import "_variables.scss";
-@import "_fonts.scss";
+
+body {
+  background-color: $off-white;
+}
+
+header {
+  background-color: $light-gray;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+}
