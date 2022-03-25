@@ -39,11 +39,7 @@ const About:
 
     return (
       <span title="Current weather">
-        {descriptions[currentWeather]}
-      </span>
-    ) || (
-      <span title="Current weather">
-        ({currentWeather})
+        {descriptions[currentWeather] || currentWeather}
       </span>
     );
   };
@@ -72,7 +68,7 @@ const About:
 
         <div className="location">
           <h2>Location</h2>
-          <p>St. Pete, Florida{" "}<span>{weatherIcon()}</span></p>
+          <p>St. Pete, Florida {weatherIcon()}</p>
         </div>
       </div>
 
