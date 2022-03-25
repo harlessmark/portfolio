@@ -10,7 +10,7 @@ import './styles/app.scss';
  * TODO
  *
  * Sendgrid for contact form?
- *
+ * https://pradeep-selva.github.io/react-hide-on-scroll/
  */
 
 const App: React.FC = (): JSX.Element => {

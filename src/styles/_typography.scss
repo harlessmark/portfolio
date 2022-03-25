@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap');
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -16,6 +15,17 @@ body {
 h1 {
   font-size: 2rem;
   line-height: 2.8rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 a {

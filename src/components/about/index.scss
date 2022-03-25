@@ -1,4 +1,7 @@
+$spacing: 120px;
+
 .about {
+  margin-bottom: $spacing;
 
   &__intro {
     margin: 85px 0 50px;
@@ -12,5 +15,50 @@
       max-width: 100%;
       transition: 0.2s;
     }
+  }
+
+  &__info {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+
+    // selects contact and location divs
+    & > div {
+      width: 100%;
+
+      // space between divs
+      &:first-child {
+        margin-right: 2rem;
+      }
+
+      // adds horizontal line above divs
+      &::before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: $text;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__me {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: $spacing;
+  }
+}
+
+.fa-sun {
+  animation: spin infinite 15s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

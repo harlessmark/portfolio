@@ -1,7 +1,7 @@
 const Skills: React.FC = (): JSX.Element => {
   return (
     <div className="bio">
-      <h1>Skills</h1>
+      <h2>Skills</h2>
 
       <div className="skill">
         <h3>01</h3>

@@ -17,8 +17,8 @@ const About:
         setCurrentWeather(description);
       } catch (err) {
         console.log(err);
-      }
-    }
+      };
+    };
     getWeather();
   }, []);
 
@@ -60,19 +60,19 @@ const About:
         onMouseLeave={() => hover(false)}
       />
 
-      <div className="info">
-        <div className="contact">
-          <h2>Contact</h2>
+      <div className="about__info">
+        <div>
+          <h3>Contact</h3>
           <p>Lorem@ipsum.com</p>
         </div>
 
-        <div className="location">
-          <h2>Location</h2>
-          <p>St. Pete, Florida {weatherIcon()}</p>
+        <div>
+          <h3>Location</h3>
+          <p>St. Pete, FL {weatherIcon()}</p>
         </div>
       </div>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, saepe rem! Atque minima velit libero molestiae facere ipsam perspiciatis mollitia fugiat modi voluptatum. Dicta quam asperiores laboriosam voluptas pariatur ad!</p>
+      <p className="about__me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, saepe rem! Atque minima velit libero molestiae facere ipsam perspiciatis mollitia fugiat modi voluptatum. Dicta quam asperiores laboriosam voluptas pariatur ad!</p>
     </div>
   );
 }
