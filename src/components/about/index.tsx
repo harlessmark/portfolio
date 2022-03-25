@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-const Bio: React.FC = (): JSX.Element => {
+const About:
+ React.FC = (): JSX.Element => {
   const [isHover, setIsHover] = useState(false);
 
   const hover = (bool: boolean): void => {
@@ -8,11 +9,11 @@ const Bio: React.FC = (): JSX.Element => {
   }
 
   return (
-    <div className="bio">
-      <h1 className="intro">Frontend Software Engineer with an affinity for user experience and web usability.</h1>
+    <div className="about">
+      <h1 className="about__intro">Frontend Software Engineer with an affinity for user experience and web usability.</h1>
 
       <img
-        className={isHover ? 'bw-image' : ''}
+        className={isHover ? 'about__img--bw' : 'about__img'}
         src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
         alt="portrait"
         onMouseEnter={() => hover(true)}
@@ -36,4 +37,4 @@ const Bio: React.FC = (): JSX.Element => {
   );
 }
 
-export default Bio;
+export default About;

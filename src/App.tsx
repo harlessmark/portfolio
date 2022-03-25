@@ -1,8 +1,8 @@
-import Nav from './components/panels/Nav';
-import Bio from './components/panels/Bio';
-import Skills from './components/panels/Skills';
-import Projects from './components/panels/Projects';
-import Contact from './components/panels/Contact';
+import Navbar from './components/navbar';
+import About from './components/about';
+import Skills from './components/skills';
+import Projects from './components/projects';
+import Contact from './components/contact';
 
 import './styles/app.scss';
 
@@ -16,8 +16,8 @@ import './styles/app.scss';
 const App: React.FC = (): JSX.Element => {
   return (
     <>
-      <Nav />
-      <Bio />
+      <Navbar />
+      <About />
       <Skills />
       <Projects />
       <Contact />

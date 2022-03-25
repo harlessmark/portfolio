@@ -1,8 +1,8 @@
-const Nav: React.FC = (): JSX.Element => {
+const Navbar: React.FC = (): JSX.Element => {
   return (
-    <header className="header">
+    <header className="navbar">
       <div>Mark Harless</div>
-      <ul>
+      <ul className="navbar__ul">
         <li><a href="#contact">Contact</a></li>
         {/* <li>link 2</li> */}
       </ul>
@@ -10,4 +10,4 @@ const Nav: React.FC = (): JSX.Element => {
   );
 }
 
-export default Nav;
+export default Navbar;

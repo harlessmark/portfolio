@@ -1,0 +1,16 @@
+.about {
+
+  &__intro {
+    margin: 85px 0 50px;
+  }
+
+  &__img {
+    max-width: 100%;
+
+    &--bw {
+      filter: grayscale(100%);
+      max-width: 100%;
+      transition: 0.2s;
+    }
+  }
+}
