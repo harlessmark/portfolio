@@ -1,8 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const About:
  React.FC = (): JSX.Element => {
   const [isHover, setIsHover] = useState(false);
+  const [currentWeather, setCurrentWeather] = useState('');
+
+  useEffect(() => {
+    // fetches St. Pete current weather
+    const getWeather = async (): Promise<void> => {
+      const url = "https://goweather.herokuapp.com/weather/st.-petersburg,-florida";
+
+      try {
+        const res = await fetch(url);
+        const { description } = await res.json();
+
+        setCurrentWeather(description);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getWeather();
+  }, []);
+
+  // converts weather description to icon
+  // from // https://reacttempo.netlify.app
+  const weatherIcon = (): JSX.Element => {
+    type Descriptions = {
+      [key: string]: JSX.Element;
+    };
+
+    const descriptions: Descriptions = {
+      Clear: <i className="fas fa-sun" />,
+      Sunny: <i className="fas fa-sun" />,
+      Cloudy: <i className="fas fa-cloud" />,
+      Rain: <i className="fas fa-cloud-showers-heavy" />,
+      Snow: <i className="fas fa-snowflake" />,
+    };
+
+    return (
+      <span title="Current weather">
+        {descriptions[currentWeather]}
+      </span>
+    ) || (
+      <span title="Current weather">
+        ({currentWeather})
+      </span>
+    );
+  };
 
   const hover = (bool: boolean): void => {
     setIsHover(bool);
@@ -28,7 +72,7 @@ const About:
 
         <div className="location">
           <h2>Location</h2>
-          <p>St. Pete, Florida</p>
+          <p>St. Pete, Florida{" "}<span>{weatherIcon()}</span></p>
         </div>
       </div>
 

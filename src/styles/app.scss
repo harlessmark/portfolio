@@ -4,11 +4,7 @@
 @import "_variables.scss";
 
 // components
-@import "../components/navbar/index.scss";
-@import "../components/about/index.scss";
-@import "../components/skills/index.scss";
-@import "../components/projects/index.scss";
-@import "../components/contact/index.scss";
+@import "../components";
 
 body {
   background-color: $off-white;
