@@ -1,9 +1,15 @@
 const Contact: React.FC = (): JSX.Element => {
   return (
-    <div className="contact">
+    <div className="contact" data-testid="contact">
       <h2>Contact</h2>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque numquam mollitia maxime earum laudantium ullam et iusto temporibus accusantium doloremque explicabo commodi a similique reiciendis nam, consectetur quaerat aliquid sit necessitatibus magni? Quas porro molestias, odio magnam nobis unde nesciunt.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque numquam
+        mollitia maxime earum laudantium ullam et iusto temporibus accusantium
+        doloremque explicabo commodi a similique reiciendis nam, consectetur
+        quaerat aliquid sit necessitatibus magni? Quas porro molestias, odio
+        magnam nobis unde nesciunt.
+      </p>
 
       <div className="socials"></div>
 
@@ -12,6 +18,6 @@ const Contact: React.FC = (): JSX.Element => {
       </footer>
     </div>
   );
-}
+};
 
 export default Contact;

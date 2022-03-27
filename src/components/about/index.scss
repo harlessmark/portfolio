@@ -33,7 +33,7 @@ $spacing: 120px;
 
       // adds horizontal line above divs
       &::before {
-        content: '';
+        content: "";
         display: block;
         height: 2px;
         width: 100%;
@@ -51,7 +51,7 @@ $spacing: 120px;
 }
 
 .fa-sun {
-  animation: spin infinite 15s linear;
+  animation: spin infinite 30s linear;
 }
 
 @keyframes spin {

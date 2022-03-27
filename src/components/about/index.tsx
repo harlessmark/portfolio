@@ -1,30 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const About:
- React.FC = (): JSX.Element => {
+const About: React.FC = (): JSX.Element => {
   const [isHover, setIsHover] = useState(false);
-  const [currentWeather, setCurrentWeather] = useState('');
+  const [currentWeather, setCurrentWeather] = useState("");
 
   useEffect(() => {
-    // fetches St. Pete current weather
     const getWeather = async (): Promise<void> => {
-      const url = "https://goweather.herokuapp.com/weather/st.-petersburg,-florida";
+      const url =
+        "https://goweather.herokuapp.com/weather/st.-petersburg,-florida";
 
       try {
         const res = await fetch(url);
-        const { description } = await res.json();
+        const { description: weather } = await res.json();
 
-        setCurrentWeather(description);
+        setCurrentWeather(weather);
       } catch (err) {
         console.log(err);
-      };
+      }
     };
     getWeather();
   }, []);
 
-  // converts weather description to icon
-  // from // https://reacttempo.netlify.app
-  const weatherIcon = (): JSX.Element => {
+  // https://reacttempo.netlify.app
+  const renderWeatherIcon = (): JSX.Element | void => {
+    if (currentWeather === "") return;
+
     type Descriptions = {
       [key: string]: JSX.Element;
     };
@@ -34,26 +34,29 @@ const About:
       Sunny: <i className="fas fa-sun" />,
       Cloudy: <i className="fas fa-cloud" />,
       Rain: <i className="fas fa-cloud-showers-heavy" />,
-      Snow: <i className="fas fa-snowflake" />,
+      Snow: <i className="fas fa-snowflake" />, // hoping this never happens
     };
 
     return (
-      <span title="Current weather">
-        {descriptions[currentWeather] || currentWeather}
+      <span title="Current weather in St. Pete" data-testid="weather">
+        {descriptions[currentWeather] && descriptions[currentWeather]}
       </span>
     );
   };
 
   const hover = (bool: boolean): void => {
     setIsHover(bool);
-  }
+  };
 
   return (
-    <div className="about">
-      <h1 className="about__intro">Frontend Software Engineer with an affinity for user experience and web usability.</h1>
+    <div className="about" data-testid="about">
+      <h1 className="about__intro">
+        Frontend Software Engineer with an affinity for user experience and web
+        usability.
+      </h1>
 
       <img
-        className={isHover ? 'about__img--bw' : 'about__img'}
+        className={isHover ? "about__img--bw" : "about__img"}
         src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
         alt="portrait"
         onMouseEnter={() => hover(true)}
@@ -63,18 +66,23 @@ const About:
       <div className="about__info">
         <div>
           <h3>Contact</h3>
-          <p>Lorem@ipsum.com</p>
+          <p>harless@duck.com</p>
         </div>
 
         <div>
           <h3>Location</h3>
-          <p>St. Pete, FL {weatherIcon()}</p>
+          <p>St. Pete, FL {renderWeatherIcon()}</p>
         </div>
       </div>
 
-      <p className="about__me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, saepe rem! Atque minima velit libero molestiae facere ipsam perspiciatis mollitia fugiat modi voluptatum. Dicta quam asperiores laboriosam voluptas pariatur ad!</p>
+      <p className="about__me">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, saepe rem!
+        Atque minima velit libero molestiae facere ipsam perspiciatis mollitia
+        fugiat modi voluptatum. Dicta quam asperiores laboriosam voluptas
+        pariatur ad!
+      </p>
     </div>
   );
-}
+};
 
 export default About;
