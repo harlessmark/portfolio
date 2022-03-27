@@ -47,6 +47,10 @@ $spacing: 120px;
     font-size: 1.5rem;
     line-height: 2rem;
     margin-top: $spacing;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 

@@ -76,10 +76,24 @@ const About: React.FC = (): JSX.Element => {
       </div>
 
       <p className="about__me">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, saepe rem!
-        Atque minima velit libero molestiae facere ipsam perspiciatis mollitia
-        fugiat modi voluptatum. Dicta quam asperiores laboriosam voluptas
-        pariatur ad!
+        Outside of programming, I spend most of my time with my wife and two
+        dogs. I enjoy reading,{" "}
+        <a
+          href="https://www.strava.com/athletes/spacemilk"
+          target="_blank"
+          rel="noreferrer"
+        >
+          running
+        </a>
+        , and taking care of our{" "}
+        <a
+          href="https://www.instagram.com/flancyplants"
+          target="_blank"
+          rel="noreferrer"
+        >
+          house plants
+        </a>
+        .
       </p>
     </div>
   );

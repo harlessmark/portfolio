@@ -13,6 +13,7 @@ test('portrait has alt text', () => {
 
 test('fetches weather and renders icon', async () => {
   render(<About />);
+  
   const weather = await screen.findByTestId('weather');
   expect(weather).toBeInTheDocument();
 });
