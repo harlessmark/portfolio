@@ -34,7 +34,7 @@ const About: React.FC = (): JSX.Element => {
       Sunny: <i className="fas fa-sun" />,
       Cloudy: <i className="fas fa-cloud" />,
       Rain: <i className="fas fa-cloud-showers-heavy" />,
-      Snow: <i className="fas fa-snowflake" />, // hoping this never happens
+      Snow: <i className="fas fa-snowflake" />, // hoping this never happens 🤞
     };
 
     return (
@@ -50,9 +50,9 @@ const About: React.FC = (): JSX.Element => {
 
   return (
     <div className="about" data-testid="about">
-      <h1 className="about__intro">
+      <h1 className="about__intro t-italic t-bold">
         Frontend Software Engineer with an affinity for user experience and web
-        usability.
+        usability <span className="t-normal">&#129106;</span>
       </h1>
 
       <img
@@ -63,10 +63,10 @@ const About: React.FC = (): JSX.Element => {
         onMouseLeave={() => hover(false)}
       />
 
-      <div className="about__info">
+      <div className="about__info d-flex">
         <div>
           <h3>Contact</h3>
-          <p>harless@duck.com</p>
+          <p>&#104;arl&#101;s&#115;&#64;d&#117;ck&#46;com</p>
         </div>
 
         <div>
@@ -77,7 +77,13 @@ const About: React.FC = (): JSX.Element => {
 
       <p className="about__me">
         Outside of programming, I spend most of my time with my wife and two
-        dogs. I enjoy reading,{" "}
+        dogs. I enjoy{" "}
+        <a href="https://www.goodreads.com/user/show/86604985-mark"
+          target="_blank"
+          rel="noreferrer"
+        >
+          reading
+        </a>,{" "}
         <a
           href="https://www.strava.com/athletes/spacemilk"
           target="_blank"
