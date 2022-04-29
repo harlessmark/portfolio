@@ -16,7 +16,7 @@ import './styles/app.scss';
 const App: React.FC = (): JSX.Element => {
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <About />
       <Skills />
       <Projects />

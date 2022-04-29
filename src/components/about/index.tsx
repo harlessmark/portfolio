@@ -85,7 +85,7 @@ const About: React.FC = (): JSX.Element => {
           reading
         </a>,{" "}
         <a
-          href="https://www.strava.com/athletes/spacemilk"
+          href="https://www.strava.com/athletes/harlessmark"
           target="_blank"
           rel="noreferrer"
         >

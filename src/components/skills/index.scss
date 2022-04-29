@@ -1,0 +1,19 @@
+.skills {
+  margin-bottom: $spacing-lg;
+
+  &__single-skill {
+    margin-bottom: 4rem;
+
+    h3 {
+      margin: 1rem 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $brown;
+    }
+  }
+}

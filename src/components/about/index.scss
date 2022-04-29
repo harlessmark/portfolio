@@ -1,7 +1,5 @@
-$spacing: 120px;
-
 .about {
-  margin-bottom: $spacing;
+  margin-bottom: $spacing-lg;
 
   &__intro {
     margin: 85px 0 50px;
@@ -45,7 +43,7 @@ $spacing: 120px;
   &__me {
     font-size: 1.5rem;
     line-height: 2rem;
-    margin-top: $spacing;
+    margin-top: $spacing-lg;
 
     a {
       text-decoration: underline;
