@@ -2,7 +2,7 @@ import Navbar from './components/navbar';
 import About from './components/about';
 import Skills from './components/skills';
 import Projects from './components/projects';
-import Contact from './components/contact';
+import Footer from './components/footer';
 
 import './styles/app.scss';
 
@@ -20,7 +20,7 @@ const App: React.FC = (): JSX.Element => {
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      <Footer />
     </>
   );
 }

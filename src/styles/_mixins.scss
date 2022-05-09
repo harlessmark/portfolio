@@ -1,0 +1,17 @@
+// for skills and projects
+
+@mixin subpanel {
+  margin-bottom: $spacing-lg;
+
+  &__single {
+    margin-bottom: 3rem;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $brown;
+    }
+  }
+}

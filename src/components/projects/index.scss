@@ -1,0 +1,38 @@
+.projects {
+  @include subpanel;
+
+  text-align: right;
+
+  &__title {
+    align-items: baseline;
+    display: flex;
+    justify-content: flex-end;
+
+    h3 {
+      margin: 1rem 0.5rem 1rem 0;
+    }
+  }
+
+  &__tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  &__tag {
+    background-color: $brown;
+    border: 1px solid $brown;
+    border-radius: 8px;
+    color: $off-white;
+    font-size: 1rem;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+  }
+
+  img {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}

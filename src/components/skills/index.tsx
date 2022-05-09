@@ -2,8 +2,8 @@ const Skills: React.FC = (): JSX.Element => (
   <div className="skills" data-testid="skills">
     <h2>Skills</h2>
 
-    <div className="skills__single-skill">
-      <h3 className="t-bold">[01] Web Development</h3>
+    <div className="skills__single">
+      <h3 className="t-bold">Web Development</h3>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
         maiores dicta porro eos repellat consequuntur doloribus quae numquam
@@ -11,8 +11,8 @@ const Skills: React.FC = (): JSX.Element => (
       </p>
     </div>
 
-    <div className="skills__single-skill">
-      <h3 className="t-bold">[02] Web Design</h3>
+    <div className="skills__single">
+      <h3 className="t-bold">Web Design</h3>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
         maiores dicta porro eos repellat consequuntur doloribus quae numquam
@@ -20,8 +20,8 @@ const Skills: React.FC = (): JSX.Element => (
       </p>
     </div>
 
-    <div className="skills__single-skill">
-      <h3 className="t-bold">[03]</h3>
+    <div className="skills__single">
+      <h3 className="t-bold">Something</h3>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
         maiores dicta porro eos repellat consequuntur doloribus quae numquam
