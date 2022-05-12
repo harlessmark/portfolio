@@ -20,7 +20,7 @@
   display: flex;
 }
 
-// fonts
+// fonts styles
 
 .t-italic {
   font-style: italic;
@@ -30,26 +30,14 @@
   font-style: normal;
 }
 
-// .t-underline {
-//   text-decoration: underline;
-// }
-
-// .t-linethrough {
-//   text-decoration: line-through;
-// }
-
-// .t-uppercase {
-//   text-transform: uppercase;
-// }
-
-// .t-none {
-//   text-transform: none;
-// }
-
 // font weights
 
 .t-bold {
   font-weight: 500;
+}
+
+.t-bolder {
+  font-weight: 600;
 }
 
 .t-nowrap {

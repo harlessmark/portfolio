@@ -1,11 +1,15 @@
+import hollywoodhangman from './images/hollywoodhangman.png';
+import ninnycode from './images/ninnycode.jpeg';
+
 const Projects: React.FC = (): JSX.Element => (
   <div className="projects" data-testid="projects">
     <h2>Projects</h2>
 
     <div className="projects__single">
       <img
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        alt="portrait"
+        src={hollywoodhangman}
+        alt="project screenshot"
+        style={{ border: '2px solid black' }}
       />
       <a
         href="https://hollywoodhangman.com"
@@ -17,7 +21,7 @@ const Projects: React.FC = (): JSX.Element => (
         <i className="fa-solid fa-arrow-up-right-from-square" />
       </a>
       <p>
-        I scraped IMDb's top 1,000 rated movies and made a fun hangman game for movie buffs. The more movies you guess correctly, the more confetti you get at the end!
+        I scraped IMDb's top 1,000 rated movies and made a fun hangman game for movie buffs. The more movies you guess correctly, the more confetti you get at the end! Featured on <a href="https://www.pastemagazine.com/movies/trivia/movie-trivia-game-hollywood-hangman/" target="_blank" rel="noreferrer">Paste Magazine</a>.
       </p>
       <div className="projects__tags">
         <span className="projects__tag">React</span>
@@ -29,9 +33,9 @@ const Projects: React.FC = (): JSX.Element => (
     </div>
 
     <div className="projects__single">
-      <img
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        alt="portrait"
+    <img
+        src={ninnycode}
+        alt="project screenshot"
       />
       <a
         href="/"

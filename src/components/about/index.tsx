@@ -76,14 +76,20 @@ const About: React.FC = (): JSX.Element => {
       </div>
 
       <p className="about__me">
+        I'm a software engineer with a passion for user experience and web. More professional related things need to be here.
+      </p>
+
+      <p className="about__me">
         Outside of programming, I spend most of my time with my wife and two
         dogs. I enjoy{" "}
-        <a href="https://www.goodreads.com/user/show/86604985-mark"
+        <a
+          href="https://www.goodreads.com/user/show/86604985-mark"
           target="_blank"
           rel="noreferrer"
         >
           reading
-        </a>,{" "}
+        </a>
+        ,{" "}
         <a
           href="https://www.strava.com/athletes/harlessmark"
           target="_blank"

@@ -1,12 +1,14 @@
 .projects {
   @include subpanel;
 
+  margin-bottom: 0;
   text-align: right;
 
   &__title {
     align-items: baseline;
     display: flex;
     justify-content: flex-end;
+    text-decoration: none;
 
     h3 {
       margin: 1rem 0.5rem 1rem 0;

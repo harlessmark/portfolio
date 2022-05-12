@@ -21,6 +21,15 @@ const Footer: React.FC = (): JSX.Element => (
           <i className="fa-brands fa-github-alt fa-xl" />
         </a>
       </li>
+      <li title="Email">
+        <a
+          href="mailto:harless@duck.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-solid fa-envelope fa-xl" />
+        </a>
+      </li>
       <li>|</li>
       <li title="Instagram">
         <a
@@ -38,15 +47,6 @@ const Footer: React.FC = (): JSX.Element => (
           rel="noreferrer"
         >
           <i className="fa-brands fa-strava fa-xl" />
-        </a>
-      </li>
-      <li title="Goodreads">
-        <a
-          href="https://www.goodreads.com/user/show/86604985-mark"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fa-brands fa-goodreads-g fa-xl" />
         </a>
       </li>
     </ul>
