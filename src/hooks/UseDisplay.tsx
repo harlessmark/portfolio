@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
 
+type Props = {
+  children: JSX.Element;
+  initialState: boolean;
+  thresholdValue: number;
+}
+
 /**
- * A custom hook to show or hide a component based ono scrollY value.
+ * A custom hook to show or hide a component based on scrollY value.
  *
- * @param {JSX} component - The component to show or hide
+ * @param {JSX} children - The component to show or hide
  * @param {number} thresholdValue - The threshold in which to show or hide the component
  * @param {boolean} initialState - The initial state of the component
  * @returns component or undefined
  */
-const UseDisplay = (
-  component: JSX.Element,
-  thresholdValue: number,
-  initialState: boolean = false
-): JSX.Element | undefined => {
-  const [show, setShow] = useState(initialState);
-  const [threshold, _] = useState(thresholdValue); // eslint-disable-line no-unused-vars
+const UseDisplay = (props: Props): JSX.Element | null => {
+  const [show, setShow] = useState(props.initialState || false);
+  const [threshold] = useState(props.thresholdValue);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -22,9 +24,9 @@ const UseDisplay = (
     });
   });
 
-  if (!show) return;
+  if (!show) return null;
 
-  return component;
+  return props.children;
 };
 
 export default UseDisplay;
