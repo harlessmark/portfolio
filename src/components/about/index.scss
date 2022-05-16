@@ -23,7 +23,6 @@
     & > div {
       width: 100%;
 
-      // space between divs
       &:first-child {
         margin-right: 2rem;
       }
@@ -47,6 +46,10 @@
 
     a {
       text-decoration: underline;
+    }
+
+    p:first-child {
+      margin-bottom: 1.5rem;
     }
   }
 }

@@ -33,13 +33,19 @@ const About: React.FC = (): JSX.Element => {
       Clear: <i className="fas fa-sun" />,
       Sunny: <i className="fas fa-sun" />,
       Cloudy: <i className="fas fa-cloud" />,
+      "Partly cloudy": <i className="fa-solid fa-cloud-sun"></i>,
       Rain: <i className="fas fa-cloud-showers-heavy" />,
       Snow: <i className="fas fa-snowflake" />, // hoping this never happens 🤞
     };
 
+    if (!descriptions[currentWeather]) {
+      console.warn("current weather is not defined: ", currentWeather);
+      return;
+    }
+
     return (
-      <span title="Current weather in St. Pete" data-testid="weather">
-        {descriptions[currentWeather] && descriptions[currentWeather]}
+      <span title={currentWeather} data-testid="weather">
+        {descriptions[currentWeather]}
       </span>
     );
   };
@@ -75,38 +81,42 @@ const About: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      <p className="about__me">
-        I'm a software engineer with a passion for user experience and web. More professional related things need to be here.
-      </p>
+      <div className="about__me">
+        <p>
+          I'm a web developer with a passion for design and user
+          experience. On some days, I feel like a programmer, on other days, I feel
+          like a designer — I like to be somewhere in between.
+        </p>
 
-      <p className="about__me">
-        Outside of programming, I spend most of my time with my wife and two
-        dogs. I enjoy{" "}
-        <a
-          href="https://www.goodreads.com/user/show/86604985-mark"
-          target="_blank"
-          rel="noreferrer"
-        >
-          reading
-        </a>
-        ,{" "}
-        <a
-          href="https://www.strava.com/athletes/harlessmark"
-          target="_blank"
-          rel="noreferrer"
-        >
-          running
-        </a>
-        , and taking care of our{" "}
-        <a
-          href="https://www.instagram.com/flancyplants"
-          target="_blank"
-          rel="noreferrer"
-        >
-          house plants
-        </a>
-        .
-      </p>
+        <p>
+          Outside of programming, I spend most of my time with my wife and two
+          dogs. I enjoy{" "}
+          <a
+            href="https://www.goodreads.com/user/show/86604985-mark"
+            target="_blank"
+            rel="noreferrer"
+          >
+            reading
+          </a>
+          ,{" "}
+          <a
+            href="https://www.strava.com/athletes/harlessmark"
+            target="_blank"
+            rel="noreferrer"
+          >
+            running
+          </a>
+          , and taking care of our{" "}
+          <a
+            href="https://www.instagram.com/flancyplants"
+            target="_blank"
+            rel="noreferrer"
+          >
+            house plants
+          </a>
+          .
+        </p>
+      </div>
     </div>
   );
 };

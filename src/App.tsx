@@ -1,4 +1,4 @@
-import Navbar from './components/navbar';
+import Header from './components/header';
 import About from './components/about';
 import Skills from './components/skills';
 import Projects from './components/projects';
@@ -16,7 +16,7 @@ import './styles/app.scss';
 const App: React.FC = (): JSX.Element => {
   return (
     <>
-      <Navbar/>
+      <Header/>
       <About />
       <Skills />
       <Projects />
